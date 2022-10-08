@@ -6,11 +6,6 @@ name: Python application
 on:
   push:
     branches: [ "test1" ]
-  pull_request:
-    branches: [ "test1" ]
-
-permissions:
-  contents: read
 
 jobs:
   build:
