@@ -1,5 +1,5 @@
 import unittest
-from main import _min, _max, _sum, _mult
+from func import _min, _max, _sum, _mult
 
 test_data_list = [
     {
