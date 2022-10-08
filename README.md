@@ -1,5 +1,6 @@
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/downloads/)
 [![unittest](https://github.com/anra-dev/programming_technology_task/actions/workflows/unittest.yml/badge.svg)](https://github.com/anra-dev/programming_technology_task/actions/workflows/unittest.yml)
+[![Pylint](https://github.com/anra-dev/programming_technology_task/actions/workflows/pylint.yml/badge.svg?branch=main)](https://github.com/anra-dev/programming_technology_task/actions/workflows/pylint.yml)
 # programming_technology_task
 ## Задание
 ![Текст задания 1](./img/photo_01.jpeg)
