@@ -20,19 +20,34 @@ test_data_list = [
 
 
 class MyTestCase(unittest.TestCase):
+    """
+    Проверка вспомогательных функций модуля func
+    """
     def test_min(self):
+        """
+        Тестирование функции func._min
+        """
         for test_data in test_data_list:
             self.assertEqual(_min(test_data['data']), test_data['min'])
 
     def test_max(self):
+        """
+        Тестирование функции func._max
+        """
         for test_data in test_data_list:
             self.assertEqual(_max(test_data['data']), test_data['max'])
 
     def test_sum(self):
+        """
+        Тестирование функции func._sum
+        """
         for test_data in test_data_list:
             self.assertEqual(_sum(test_data['data']), test_data['sum'])
 
     def test_mult(self):
+        """
+        Тестирование функции func._mult
+        """
         for test_data in test_data_list:
             self.assertEqual(_mult(test_data['data']), test_data['mult'])
 
