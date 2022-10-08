@@ -4,7 +4,7 @@ def get_data_from_file(file_path: str) -> str:
     :param file_path: путь к файлу.
     :return: данные в текстовом формате.
     """
-    with open(file_path) as file:
+    with open(file_path, encoding="utf-8") as file:
         data = file.readline().strip()
     return data
 
@@ -18,7 +18,7 @@ def get_tuple_of_numbers(data: str) -> tuple[int]:
     tuple_of_numbers = None
     try:
         tuple_of_numbers = tuple(int(i) for i in data.split())
-    except ValueError as e:
+    except ValueError:
         print("File data is not correct")
     return tuple_of_numbers
 
