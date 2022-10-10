@@ -6,6 +6,7 @@ def get_data_from_file(file_path: str) -> str:
     """
     with open(file_path, encoding="utf-8") as file:
         data = file.readline().strip()
+
     return data
 
 
@@ -20,6 +21,7 @@ def get_tuple_of_numbers(data: str) -> tuple:
         tuple_of_numbers = tuple(int(i) for i in data.split())
     except ValueError:
         print("File data is not correct")
+
     return tuple_of_numbers
 
 
@@ -33,6 +35,7 @@ def _min(data: tuple) -> int:
     for i in range(1, len(data)):
         if data[i] < result:
             result = data[i]
+
     return result
 
 
@@ -46,6 +49,7 @@ def _max(data: tuple) -> int:
     for i in range(1, len(data)):
         if data[i] > result:
             result = data[i]
+
     return result
 
 
@@ -58,6 +62,7 @@ def _sum(data: tuple) -> int:
     result = 0
     for item in data:
         result += item
+
     return result
 
 
@@ -73,6 +78,7 @@ def _mult(data: tuple) -> int:
             result = item
         else:
             result *= item
+
     return result
 
 
@@ -86,8 +92,8 @@ def calculate_date_from_file(
     """
     data_from_file = get_data_from_file(_file_path)
     nums = get_tuple_of_numbers(data_from_file)
-    if nums is not None:
-        return _min(nums), _max(nums), _sum(nums), _mult(nums)
+
+    return _min(nums), _max(nums), _sum(nums), _mult(nums)
 
 
 if __name__ == '__main__':

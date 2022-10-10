@@ -18,6 +18,7 @@ def generate_str_of_numbers(count_nums: int) -> str:
     while count_nums > 0:
         list_nums.append(random.randint(MIN_NUM, MAX_NUM))
         count_nums -= 1
+
     return ' '.join(map(str, list_nums))
 
 
@@ -29,7 +30,7 @@ def generate_file(count_nums: int):
     """
     os.makedirs(FILE_DIR, exist_ok=True)
     file_name = f'{FILE_DIR}/{count_nums}.nums'
-    with open(file_name, 'w') as file:
+    with open(file_name, mode='w', encoding="utf-8") as file:
         file.write(generate_str_of_numbers(count_nums))
 
 
