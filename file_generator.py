@@ -2,8 +2,8 @@ import os
 import random
 
 
-MIN_NUM = 0
-MAX_NUM = 9
+MIN_NUM = 1
+MAX_NUM = 99
 FILE_DIR_ABSOLUTE_PATH = '/Users/r_andreev/Documents/PycharmProjects/programming_technology_task/test_files'
 TUPLE_COUNT_NUMS = (1000, 10000, 100000, 200000, 400000, 800000, 1000000)
 
