@@ -2,7 +2,7 @@ import os
 import random
 
 
-MIN_NUM = 1
+MIN_NUM = 0
 MAX_NUM = 99
 FILE_DIR_ABSOLUTE_PATH = '/Users/r_andreev/Documents/PycharmProjects/programming_technology_task/test_files'
 TUPLE_COUNT_NUMS = (1000, 10000, 100000, 200000, 400000, 800000, 1000000)
@@ -34,7 +34,7 @@ def generate_file(count_nums: int):
         file.write(generate_str_of_numbers(count_nums))
 
 
-def generate_files_by_tuple(tuple_count_nums: tuple):
+def _generate_files_by_tuple(tuple_count_nums: tuple):
     """
     Создает файлы в которые записывает строку из чисел.
     :param tuple_count_nums: картеж с количеством чисел.
@@ -44,5 +44,14 @@ def generate_files_by_tuple(tuple_count_nums: tuple):
         generate_file(count_nums)
 
 
+def generate_files_by_tuple():
+    """
+    Создает файлы в которые записывает строку из чисел
+    по кортежу TUPLE_COUNT_NUMS
+    :return:
+    """
+    _generate_files_by_tuple(TUPLE_COUNT_NUMS)
+
+
 if __name__ == '__main__':
-    generate_files_by_tuple(TUPLE_COUNT_NUMS)
+    _generate_files_by_tuple(TUPLE_COUNT_NUMS)
