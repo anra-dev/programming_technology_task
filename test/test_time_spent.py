@@ -98,7 +98,8 @@ class TestTimeSpentSupFunction(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        tests = list(cls.timer.keys())
+        value_list = list(cls.timer.items())
+        tests, times = zip(*value_list)
         times = list(cls.timer.values())
         plt.figure(figsize=(10, 5))
         plt.bar(tests, times, color='maroon', width=0.4)
