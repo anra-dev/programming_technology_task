@@ -2,10 +2,10 @@ import os
 import random
 
 
-MIN_NUM = 1
-MAX_NUM = 99
-FILE_DIR = 'test_files'
-TUPLE_COUNT_NUMS = (1, 10, 100, 1000, 10000, 100000, 1000000)
+MIN_NUM = 0
+MAX_NUM = 9
+FILE_DIR_ABSOLUTE_PATH = '/Users/r_andreev/Documents/PycharmProjects/programming_technology_task/test_files'
+TUPLE_COUNT_NUMS = (1000, 10000, 100000, 200000, 400000, 800000, 1000000)
 
 
 def generate_str_of_numbers(count_nums: int) -> str:
@@ -28,8 +28,8 @@ def generate_file(count_nums: int):
     :param count_nums: количество чисел
     :return: None
     """
-    os.makedirs(FILE_DIR, exist_ok=True)
-    file_name = f'{FILE_DIR}/{count_nums}.nums'
+    os.makedirs(FILE_DIR_ABSOLUTE_PATH, exist_ok=True)
+    file_name = f'{FILE_DIR_ABSOLUTE_PATH}/{count_nums}.nums'
     with open(file_name, mode='w', encoding="utf-8") as file:
         file.write(generate_str_of_numbers(count_nums))
 

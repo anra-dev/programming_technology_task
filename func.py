@@ -82,8 +82,7 @@ def _mult(data: tuple) -> int:
     return result
 
 
-def calculate_date_from_file(
-        _file_path: str) -> tuple[int, int, int, int] | None:
+def calculate_date_from_file(_file_path: str) -> tuple:
     """
     Считывает из файла числа, и возвращает минимальное, максимальное число,
     их общую сумму и произведение.
