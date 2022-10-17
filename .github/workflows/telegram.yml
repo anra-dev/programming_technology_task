@@ -1,4 +1,4 @@
-name: unittest_telegram
+name: telegram
 
 on: [push, workflow_dispatch]
   
